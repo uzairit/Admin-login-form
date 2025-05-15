@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+}
+
+#num {
+  padding: 2%;
+  margin: 2% 0;
+  width: 100%;
+  font-size: 1.8vw;
+  border: 1px solid #ccc;
+  border-radius: 1vw;
+}
+
+#check {
+  padding: 2%;
+  width: 100%;
+  max-width: 250px;
+  background-color: rgb(36, 156, 255);
+  color: white;
+  border: none;
+  border-radius: 1vw;
+  font-size: 2vw;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#check:hover {
+  background-color: rgb(3, 104, 186);
+}
+
+.box2Css {
+  border: 1px solid black;
+  padding: 3%;
+  width: 90%;
+  max-width: 400px;
+  margin: 2% auto;
+  font-size: 1.8vw;
+  background-color: #fff;
+}
+
+#adminLog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  min-height: 50vh;
+  border: 1px solid;
+  padding: 3%;
+}
+
+#email,
+#password {
+  width: 100%;
+  padding: 2%;
+  margin: 2% 0;
+  border: 1px solid #ccc;
+  border-radius: 1vw;
+  font-size: 1.8vw;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+#enterBtn {
+  width: 100%;
+  padding: 3%;
+  background-color: rgb(36, 156, 255);
+  color: white;
+  border: none;
+  border-radius: 1vw;
+  font-size: 2vw;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+}
+
+#enterBtn:hover {
+  background-color: rgb(3, 104, 186);
+}
+
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2f;
+  padding: 2% 5%;
+  color: white;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+#navBar>div:first-child,
+#navBar>div:last-child {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+#navBar h1 {
+  font-size: 3vw;
+  margin: 0;
+}
+
+#navBar p {
+  font-size: 2vw;
+  margin: 0;
+}
+
+#selections {
+  padding: 2%;
+  border-radius: 1vw;
+  border: none;
+  font-size: 2vw;
+  min-width: 80px;
+}
+
+#box {
+  padding: 4%;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 800px;
+  min-height: 40vh;
+  background-color: #f9f9f9;
+  border: 2px dashed #ddd;
+  border-radius: 1vw;
+  font-size: 2vw;
+}
