@@ -22,7 +22,7 @@ function adminPage() {
     <label for="num"></label>
     <input type="text" id="num" placeholder="Enter Number">
     <button id="check">Check Student</button>
-    <p id="totalStudents">Total Students: ${data.length}</p>
+    <p id="totalStudents">Total Students: ${data.length === '' ? data.length === 0 : data.length}</p>
   </div>
 </div>
 

@@ -13,7 +13,7 @@ addBtn.addEventListener('click', () => {
     <input type="number" id="num" placeholder="Enter Number">
     <label for="course">Course:</label>
     <select name="" id="selections">
-      <option disabled selected>Select Course</option>
+      <option value="" disabled selected>Select Course</option>
     </select>
     <div class="gender-container">
     <div class="gender-option">
