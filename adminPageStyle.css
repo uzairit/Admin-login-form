@@ -74,8 +74,13 @@ body {
   width: 90%;
   max-width: 500px;
   min-height: 50vh;
-  border: 1px solid;
+  border: 1px solid #dadada;
   padding: 3%;
+  border-radius: 10px;
+}
+
+#adminLog label {
+  font-weight: 600;
 }
 
 #email,
@@ -104,6 +109,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
 #enterBtn:hover {
@@ -115,36 +121,79 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #1e1e2f;
-  padding: 2% 5%;
+  padding: 12px 20px;
   color: white;
-  flex-wrap: wrap;
-  gap: 2vw;
+  border-bottom: 2px solid #00aaff;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#navBar>div:first-child,
-#navBar>div:last-child {
+#navBar .left,
+#navBar .right {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2vw;
+  gap: 12px;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
 }
 
 #navBar h1 {
-  font-size: 3vw;
+  font-size: 1.4rem;
+  font-weight: 700;
   margin: 0;
+  white-space: nowrap;
 }
 
-#navBar p {
-  font-size: 2vw;
-  margin: 0;
-}
-
-#selections {
-  padding: 2%;
-  border-radius: 1vw;
+#navBar input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 5px;
   border: none;
-  font-size: 2vw;
-  min-width: 80px;
+  font-size: 0.95rem;
+  min-width: 100px;
+  max-width: 150px;
+  flex: 1 1 auto;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 0 0 2px transparent;
+  transition: box-shadow 0.2s ease;
+}
+
+#navBar input[type="text"]:focus {
+  box-shadow: 0 0 0 2px #00aaff;
+}
+
+#navBar button {
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: none;
+  background-color: #249cff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+#navBar button:hover {
+  background-color: #0368ba;
+}
+
+#totalStudents {
+  background-color: #2a2a40;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid #00aaff;
+  box-shadow: 0 3px 6px rgba(0, 170, 255, 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 #box {
@@ -157,4 +206,26 @@ body {
   border: 2px dashed #ddd;
   border-radius: 1vw;
   font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+  #navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navBar .left,
+  #navBar .right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #navBar input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #navBar button {
+    width: fit-content;
+  }
 }

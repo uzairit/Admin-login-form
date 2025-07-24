@@ -1,18 +1,20 @@
 let addBtn = document.getElementById('addS')
 addBtn.addEventListener('click', () => {
   let formBox = document.getElementById('formBox')
-  
+
   addBtn.style.display = 'none'
   formBox.innerHTML = `  
 <form action="" id="form" class="formCss">
     <label for="name">Name:</label>
     <input type="text" id="name" placeholder="Enter Student Name">
-    <label for="course">Course:</label>
-    <input type="text" id="course" placeholder="Enter Student Course">
     <label for="email">Email:</label>
     <input type="email" id="email" placeholder="Enter Student Email">
     <label for="num">Number:</label>
     <input type="number" id="num" placeholder="Enter Number">
+    <label for="course">Course:</label>
+    <select name="" id="selections">
+      <option disabled selected>Select Course</option>
+    </select>
     <div class="gender-container">
     <div class="gender-option">
     <input type="radio" name="gender" class="radio" value="Male" id="male">
@@ -27,11 +29,20 @@ addBtn.addEventListener('click', () => {
     </div>
 </form>`
 
-  let arr = JSON.parse(localStorage.getItem('data')) || []
+  const data2 = JSON.parse(localStorage.getItem('data2')) || []
+  let selections = document.getElementById('selections')
+  data2.forEach((s) => {
+    if (s.courses) {
+      selections.innerHTML += `
+      <option value="${s.courses}">${s.courses}</option>`
+    }
+  })
+
+  let arr = JSON.parse(localStorage.getItem('data'))
+  if (!Array.isArray(arr)) arr = []
   document.getElementById('add').addEventListener('click', () => {
     let date = new Date().toLocaleDateString()
     let Name = document.getElementById('name')
-    let Course = document.getElementById('course')
     let Email = document.getElementById('email')
     let number = document.getElementById('num')
     let Radio = document.getElementsByClassName('radio')
@@ -45,11 +56,11 @@ addBtn.addEventListener('click', () => {
 
     let obj = {
       name: Name.value,
-      course: Course.value,
+      course: selections.value,
       email: Email.value,
       radio: rValue,
       num: number.value,
-      date:date
+      date: date
     }
     arr.push(obj)
     localStorage.setItem('data', JSON.stringify(arr))
